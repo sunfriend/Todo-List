@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="modal"></div>
+    <h1 class="main-header">Simple Todo List</h1>
+    <div class="page-wrapper">
+        <div data-sidebar class="sidebar">
+            <ul class="sidebar-list">
+                <li class="sidebar-list__item" data-inbox-tasks><span class="active-list">Inbox</span><small data-task-counter class="task-counter">0</small></li>
+                <li class="sidebar-list__item" data-upcoming-tasks><span>Upcoming</span><small class="task-counter">0</small></li>
+                <li class="sidebar-list__item" data-today-tasks><span>Today</span><small class="task-counter">0</small></li>
+            </ul>
+                <button id="btn-add-project" data-add-project type="button" class="btn">Add Project</button>
+            <ul data-projects-container class="projects-list__container">
+            </ul>
+            <form data-projects-input class="project-input__container">
+                <input data-input-project type="text" class="projects-input">
+                <button data-save-button class="btn">Save</button>
+            </form> 
+        </div>
+        <div class="editor">
+            <div data-task-controller class="header-tasks-container">
+                <h2 data-project-title></h2>
+                <button data-project-btn-add class="btn">Add task</button>
+            </div>
+            <form data-task-window class="task-window">
+                <h3>Task</h3>
+                <div class="task-input-container">
+                    <input class="task-title-input" data-task-title type="text" placeholder="e.g Friday, going to concert" name="title">
+                    <small></small>
+                </div>
+                <div class="task-input-container">
+                    <textarea class="task-description-input" data-task-description placeholder="Your description" name="description"></textarea>
+                    <small></small>
+                </div>
+                <div class="task-input-container">
+                    <input class="task-date-input date-picker" data-task-date type="date" name="date">
+                    <small></small>
+                </div>
+                <div data-window-btn-container class="task-buttons-container">
+                    <button id="edit-btn" class="btn">Edit</button>
+                    <button id="add-btn" class="btn">Add</button>
+                    <button id="cancel-btn" class="btn">Cancel</button>
+                </div>
+            </form>
+                <ul data-tasks-list class="tasks-list-container"></ul>
+        </div>
+    </div>
+</body>
+</html>
